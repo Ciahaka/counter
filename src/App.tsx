@@ -9,16 +9,20 @@ function App() {
   let maxValue = 5
   const startValue = 0
 
-  const Increment = () => maxValue ? setStateCounter(stateCounter + 1) : ''
-  const resetCounter = () => setStateCounter(0)
+
 
   const newMaxValueHandler = (newValue:number) => {
     if (newValue) {
       maxValue = newValue
       setStateCounter(newValue)
     }
-    return 0
+    return stateCounter
   }
+
+  const Increment = () => maxValue ? setStateCounter(stateCounter + 1) : ''
+  const resetCounter = () => setStateCounter(0)
+
+
 
   return (
     <div className={s.App}>
