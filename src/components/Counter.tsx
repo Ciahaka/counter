@@ -9,10 +9,15 @@ export type propsType = {
   callBackHandlerIncrement: () => void
   startValue: number
   maxValue: number
-
+  newMaxValue:(newValue: number)=>void
 }
 
+
 export const Counter = (props: propsType) => {
+
+  const changeMaxValue = (newValue: number) => {
+    props.newMaxValue(newValue)
+  }
 
   return (
     <div className={classes.count}>
@@ -20,7 +25,7 @@ export const Counter = (props: propsType) => {
         <ChangeMaxValue
           number={props.number}
           maxValue={props.maxValue}
-          activationRenderingCallback={()=>{}}
+          activationChangeValue={changeMaxValue}
 
 
         />

@@ -11,8 +11,13 @@ function App() {
 
   const Increment = () => maxValue ? setStateCounter(stateCounter + 1) : ''
   const resetCounter = () => setStateCounter(0)
-  const changeMaxValue = () => {
 
+  const newMaxValueHandler = (newValue:number) => {
+    if (newValue) {
+      maxValue = newValue
+      setStateCounter(newValue)
+    }
+    return 0
   }
 
   return (
@@ -22,6 +27,7 @@ function App() {
                callBackHandlerIncrement={Increment}
                startValue={startValue}
                maxValue={maxValue}
+               newMaxValue={newMaxValueHandler}
 
       />
     </div>

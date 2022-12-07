@@ -5,7 +5,7 @@ import classes from './Counter.module.css';
 export type ValuePropsType = {
   number: number
   maxValue:number
-  activationRenderingCallback:(addMax:number)=>void
+  activationChangeValue:(addMax:number)=>void
 }
 
 export const ChangeMaxValue = (props:ValuePropsType) => {
@@ -17,13 +17,14 @@ export const ChangeMaxValue = (props:ValuePropsType) => {
     setAddMax(props.maxValue)
   }
 const backToSpanHandler = () => {
+
   setValueMax(false)
-  props.activationRenderingCallback(addMax)
+  props.activationChangeValue(addMax)
 }
-const changMaxHandler =(e:ChangeEvent<HTMLInputElement>)=>setAddMax(e.currentTarget.value)
+const changMaxHandler =(e:ChangeEvent<HTMLInputElement>)=>setAddMax(e.currentTarget.valueAsNumber)
 
   return valueMax
-    ? <input value={addMax} onChange={changMaxHandler} onBlur={backToSpanHandler} autoFocus/>
+    ? <input type="number" value={addMax} onChange={changMaxHandler} onBlur={backToSpanHandler} autoFocus/>
     : <span className={props.number === props.maxValue ? classes.numberRed : ''} onDoubleClick={magicSpanHandler}>{props.number} </span>
 
 };
