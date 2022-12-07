@@ -14,7 +14,7 @@ export const Counter = (props: propsType) => {
     return (
         <div className={classes.count}>
             <div className={classes.number}>
-                <span className={props.number === 5 ? classes.numberRed : ""}>{props.number} </span>
+                <span className={props.number === props.maxValue ? classes.numberRed : ""}>{props.number} </span>
             </div>
             <div className={classes.buttons}>
                 <Button name='inc'
