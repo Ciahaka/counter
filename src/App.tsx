@@ -5,24 +5,25 @@ import {Counter} from './components/Counter';
 
 function App() {
 
-  const [stateCounter, setStateCounter] = useState(0)
+  const [stateCounter, setStateCounter] = useState<number>(0)
   let maxValue = 5
   const startValue = 0
 
-  const Increment = () => {
-
-    if (maxValue) {
-    }
-    setStateCounter(stateCounter +1)
-  }
-
+  const Increment = () => maxValue ? setStateCounter(stateCounter + 1) : ''
   const resetCounter = () => setStateCounter(0)
+  const changeMaxValue = () => {
 
+  }
 
   return (
     <div className={s.App}>
-      <Counter number={stateCounter} callBackHandlerReset={resetCounter} callBackHandlerIncrement={Increment}
-               startValue={startValue} maxValue={maxValue}/>
+      <Counter number={stateCounter}
+               callBackHandlerReset={resetCounter}
+               callBackHandlerIncrement={Increment}
+               startValue={startValue}
+               maxValue={maxValue}
+
+      />
     </div>
   )
 }
