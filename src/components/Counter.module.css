@@ -1,0 +1,41 @@
+.count {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  height: 300px;
+  border: 3px solid #00a6ff;
+  border-radius: 6px;
+  margin: 20px;
+  background-color: #D09C5E;
+}
+
+.number {
+  display: flex;
+  justify-content: center;
+  width: 250px;
+  height: 140px;
+  border: 3px solid #2f2e2e;
+  border-radius: 15px;
+  margin-left: 20px;
+  margin-top: 20px;
+  margin-right: 20px;
+  align-items: center;
+  background-color: #00a6ff;
+  font-size: 70px;
+}
+
+.numberRed {
+  color: red;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  height: 140px;
+  margin: 20px;
+  border: 3px solid #2f2e2e;
+  border-radius: 15px;
+  border-color: #2f2e2e;
+}
