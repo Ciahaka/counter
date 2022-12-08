@@ -1,4 +1,4 @@
-import classes from "./Button.module.css"
+import s from "./Button.module.css"
 
 type propsButton = {
     name: string
@@ -13,7 +13,7 @@ export const Button = (props: propsButton)=> {
     }
 
     return (
-        <button className={classes.button}
+        <button className={s.button}
           onClick={onClickHandler}
                 disabled={props.disabled}
                 >

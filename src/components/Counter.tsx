@@ -1,6 +1,6 @@
 import React from 'react';
 import {Button} from './Button';
-import classes from './Counter.module.css'
+import s from './Counter.module.css'
 import {ChangeMaxValue} from './ChangeMaxValue';
 
 export type propsType = {
@@ -20,8 +20,8 @@ export const Counter = (props: propsType) => {
   }
 
   return (
-    <div className={classes.count}>
-      <div className={classes.number}>
+    <div className={s.count}>
+      <div className={s.number}>
         <ChangeMaxValue
           number={props.number}
           maxValue={props.maxValue}
@@ -30,7 +30,7 @@ export const Counter = (props: propsType) => {
 
         />
       </div>
-      <div className={classes.buttons}>
+      <div className={s.buttons}>
         <Button name="inc"
                 callBack={props.callBackHandlerIncrement}
                 disabled={props.number === props.maxValue}

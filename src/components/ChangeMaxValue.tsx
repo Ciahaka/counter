@@ -1,5 +1,5 @@
 import React, {ChangeEvent, useState} from 'react';
-import classes from './Counter.module.css';
+import s from './Counter.module.css';
 
 
 export type ValuePropsType = {
@@ -25,6 +25,6 @@ const changMaxHandler =(e:ChangeEvent<HTMLInputElement>)=>setAddMax(e.currentTar
 
   return valueMax
     ? <input type="number" value={addMax} onChange={changMaxHandler} onBlur={backToSpanHandler} autoFocus/>
-    : <span className={props.number === props.maxValue ? classes.numberRed : ''} onDoubleClick={magicSpanHandler}>{props.number} </span>
+    : <span className={props.number === props.maxValue ? s.numberRed : ''} onDoubleClick={magicSpanHandler}>{props.number} </span>
 
 };
